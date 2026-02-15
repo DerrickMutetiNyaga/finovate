@@ -9,7 +9,7 @@
     <meta name="author" content="themexriver">
 
     <!-- Page Title -->
-    <title> Finvise Consulting - Consulting Finance Business  </title>
+    <title> Finovate Research Consulting - Consulting Finance Business  </title>
 
     <!-- Favicon and Touch Icons -->
     <link href="assets/images/favicon/favicon.png" rel="shortcut icon" type="image/png">
@@ -37,6 +37,28 @@
 
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
+    
+    <!-- Additional custom styles for blog details page -->
+    <style>
+        .share a:hover {
+            transform: translateY(-3px) !important;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+        }
+        .tag a:hover {
+            background: #667eea !important;
+            color: #fff !important;
+            transform: translateY(-2px);
+        }
+        #recent-posts-list a:hover {
+            color: #667eea !important;
+        }
+        #blog-featured-image img {
+            transition: transform 0.3s ease;
+        }
+        #blog-featured-image:hover img {
+            transform: scale(1.02);
+        }
+    </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -178,8 +200,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col col-xs-12">
-                        <h2>Blog Details</h2>
-                        <ol class="breadcrumb">
+                        <h2 id="page-title">Blog Details</h2>
+                        <ol class="breadcrumb" id="breadcrumb">
                             <li><a href="home.html">Home</a></li>
                             <li>Blog Details</li>
                         </ol>
@@ -191,23 +213,41 @@
 
 
         <!-- start blog-with-sidebar-section -->
-        <section class="blog-with-sidebar-section blog-single-content section-padding">
+        <section class="blog-with-sidebar-section blog-single-content section-padding" style="background: #f8f9fa;">
             <div class="container">
                 <div class="row">
-                    <div class="news-grids col col-lg-8 col-lg-offset-1 col-lg-push-3 col-md-8 col-md-push-4">
-                        <div class="post">
-                            <div class="post-title-meta">
-                                <h2 id="blog-title">Blog Title</h2>
-                                <ul class="meta-info">
-                                    <li><a href="#" id="blog-author">By: Author Name</a></li>
-                                    <li><a href="#" id="blog-date"><i class="fa fa-clock-o"></i> Publish Date</a></li>
+                    <!-- Main Content Area -->
+                    <div class="col col-lg-9 col-md-8">
+                        <div class="post" style="background: #fff; border-radius: 12px; padding: 40px; box-shadow: 0 2px 20px rgba(0,0,0,0.08); margin-bottom: 30px;">
+                            <!-- Featured Image -->
+                            <div class="post-featured-image" id="blog-featured-image" style="margin-bottom: 30px; display: none;">
+                                <img id="blog-main-image" src="" alt="" style="width: 100%; border-radius: 8px; max-height: 500px; object-fit: cover;">
+                            </div>
+                            
+                            <!-- Post Header -->
+                            <div class="post-title-meta" style="margin-bottom: 30px; padding-bottom: 25px; border-bottom: 2px solid #e9ecef;">
+                                <div style="margin-bottom: 15px;">
+                                    <span id="blog-category" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; padding: 6px 16px; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;"></span>
+                                </div>
+                                <h2 id="blog-title" style="font-size: 36px; font-weight: 700; color: #1a202c; line-height: 1.3; margin-bottom: 20px;">Blog Title</h2>
+                                <ul class="meta-info" style="list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 20px;">
+                                    <li style="display: flex; align-items: center; color: #64748b; font-size: 14px;">
+                                        <i class="fa fa-user" style="margin-right: 8px; color: #667eea;"></i>
+                                        <span id="blog-author">Author Name</span>
+                                    </li>
+                                    <li style="display: flex; align-items: center; color: #64748b; font-size: 14px;">
+                                        <i class="fa fa-clock-o" style="margin-right: 8px; color: #667eea;"></i>
+                                        <span id="blog-date">Publish Date</span>
+                                    </li>
                                 </ul>
                             </div>
-                            <div class="post-body">
-                                <p id="blog-content">Blog content goes here.</p>
+                            
+                            <!-- Post Body -->
+                            <div class="post-body" style="line-height: 1.8; color: #4a5568;">
+                                <div id="blog-content" style="font-size: 16px; line-height: 1.9;">Blog content goes here.</div>
                         
-                                <div class="gallery-post" id="blog-gallery" style="display:none;">
-                                    <div class="gallery" id="gallery-images">
+                                <div class="gallery-post" id="blog-gallery" style="display:none; margin-top: 30px;">
+                                    <div class="gallery" id="gallery-images" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
                                         <!-- Images will be dynamically inserted here -->
                                     </div>
                                 </div>
@@ -217,54 +257,35 @@
                         
                         
 
-                        <div class="tag-share">
-                            <div>
-                                <span>Tags: </span>
-                                <ul class="tag">
-                                    <li><a href="#">Business</a></li>
-                                    <li><a href="#">Article</a></li>
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">Creative</a></li>
+                        <!-- Tags and Share Section -->
+                        <div class="tag-share" style="background: #fff; border-radius: 12px; padding: 30px; box-shadow: 0 2px 20px rgba(0,0,0,0.08); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                            <div style="flex: 1; min-width: 250px;">
+                                <span style="font-weight: 600; color: #1a202c; margin-right: 10px; display: block; margin-bottom: 10px;">Tags:</span>
+                                <ul class="tag" id="blog-tags" style="list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px;">
+                                    <!-- Tags will be dynamically inserted here -->
                                 </ul>
                             </div>
                             <div>
-                                <span>Share:</span>
-                                <ul class="share">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <span style="font-weight: 600; color: #1a202c; margin-right: 15px; display: block; margin-bottom: 10px;">Share:</span>
+                                <ul class="share" style="list-style: none; padding: 0; margin: 0; display: flex; gap: 12px;">
+                                    <li><a href="#" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: #3b5998; color: #fff; border-radius: 50%; text-decoration: none; transition: transform 0.3s;"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: #1da1f2; color: #fff; border-radius: 50%; text-decoration: none; transition: transform 0.3s;"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: #0077b5; color: #fff; border-radius: 50%; text-decoration: none; transition: transform 0.3s;"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: #dd4b39; color: #fff; border-radius: 50%; text-decoration: none; transition: transform 0.3s;"><i class="fa fa-google-plus"></i></a></li>
                                 </ul>
                             </div>
-                        </div> <!-- end tag-share -->
-
-                       
+                        </div>
                     </div> <!-- end blog-content -->
 
-                    <div class="blog-sidebar col col-lg-3 col-lg-pull-9 col-md-4 col-md-pull-8 col-sm-5">
-                        
-                        
-                        
-                        
-                        <div class="widget recent-post-widget">
-                            <h3>Recent Posts</h3>
-                            <ul>
+                    <!-- Sidebar -->
+                    <div class="col col-lg-3 col-md-4">
+                        <div class="widget recent-post-widget" style="background: #fff; border-radius: 12px; padding: 30px; box-shadow: 0 2px 20px rgba(0,0,0,0.08); margin-bottom: 30px;">
+                            <h3 style="font-size: 22px; font-weight: 700; color: #1a202c; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 2px solid #e9ecef; position: relative;">
+                                Recent Posts
+                                <span style="position: absolute; bottom: -2px; left: 0; width: 60px; height: 2px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></span>
+                            </h3>
+                            <ul id="recent-posts-list" style="list-style: none; padding: 0; margin: 0;">
                                 <!-- Recent posts will be dynamically inserted here -->
-                            </ul>
-                        </div>
-                        
-                        
-                        
-                        <div class="widget instagram-widget">
-                            <h3>Instagram</h3>
-                            <ul>
-                                <li><a href="#"><img src="assets/images/instagram/img-1.jpg" alt></a></li>
-                                <li><a href="#"><img src="assets/images/instagram/img-2.jpg" alt></a></li>
-                                <li><a href="#"><img src="assets/images/instagram/img-3.jpg" alt></a></li>
-                                <li><a href="#"><img src="assets/images/instagram/img-4.jpg" alt></a></li>
-                                <li><a href="#"><img src="assets/images/instagram/img-5.jpg" alt></a></li>
-                                <li><a href="#"><img src="assets/images/instagram/img-6.jpg" alt></a></li>
                             </ul>
                         </div>
                     </div>                    
@@ -285,7 +306,7 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
                                 <ul class="contact-info">
                                     <li><i class="fa fa-phone"></i> +254718 880529  </li>
-                                    <li><i class="fa fa-envelope"></i> info@Finvice Consulting</li>
+                                    <li><i class="fa fa-envelope"></i> info@Finovate Research Consulting</li>
                                     <li><i class="fa fa-home"></i> 380 St Kilda Road, Melbourne VIC 3004, Australia</li>
                                 </ul>
                             </div>
@@ -399,17 +420,65 @@
         }
     
         function displayBlogDetails(blog) {
+            // Update page title and breadcrumb based on category
+            const isInsight = blog.category && blog.category.toLowerCase().includes('insight');
+            const pageTitle = document.getElementById('page-title');
+            const breadcrumb = document.getElementById('breadcrumb');
+            
+            if (isInsight) {
+                pageTitle.innerText = 'Insights Details';
+                breadcrumb.innerHTML = '<li><a href="home.html">Home</a></li><li>Insights Details</li>';
+            } else {
+                pageTitle.innerText = 'Blog Details';
+                breadcrumb.innerHTML = '<li><a href="home.html">Home</a></li><li>Blog Details</li>';
+            }
+            
+            // Update blog title
             document.getElementById('blog-title').innerText = blog.title;
-            document.getElementById('blog-author').innerText = `By: ${blog.author}`;
-            document.getElementById('blog-date').innerHTML = `<i class="fa fa-clock-o"></i> ${new Date(blog.publishDate).toLocaleDateString()}`;
+            
+            // Update category badge
+            const categoryBadge = document.getElementById('blog-category');
+            if (blog.category) {
+                categoryBadge.innerText = blog.category;
+                categoryBadge.style.display = 'inline-block';
+            } else {
+                categoryBadge.style.display = 'none';
+            }
+            
+            // Update author
+            document.getElementById('blog-author').innerText = blog.author;
+            
+            // Update date
+            const publishDate = new Date(blog.publishDate);
+            document.getElementById('blog-date').innerText = publishDate.toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+            
+            // Update content
             document.getElementById('blog-content').innerHTML = blog.content;
     
-            const blogImage = document.getElementById('blog-gallery');
+            // Update featured image
+            const featuredImageContainer = document.getElementById('blog-featured-image');
+            const featuredImage = document.getElementById('blog-main-image');
             if (blog.image) {
-                blogImage.innerHTML = `<img src="${blog.image}" alt="">`;
-                blogImage.style.display = 'block';
+                featuredImage.src = blog.image;
+                featuredImage.alt = blog.title;
+                featuredImageContainer.style.display = 'block';
             } else {
-                blogImage.style.display = 'none';
+                featuredImageContainer.style.display = 'none';
+            }
+            
+            // Update tags
+            const tagsContainer = document.getElementById('blog-tags');
+            tagsContainer.innerHTML = '';
+            if (blog.tags && blog.tags.length > 0) {
+                blog.tags.forEach(tag => {
+                    const tagItem = document.createElement('li');
+                    tagItem.innerHTML = `<a href="#" style="display: inline-block; padding: 6px 14px; background: #f1f5f9; color: #475569; border-radius: 20px; font-size: 13px; text-decoration: none; transition: all 0.3s; font-weight: 500;">${tag}</a>`;
+                    tagsContainer.appendChild(tagItem);
+                });
             }
         }
     
@@ -427,18 +496,44 @@
         }
     
         function displayRecentPosts(posts) {
-            const recentPostsList = document.querySelector('.recent-post-widget ul');
+            const recentPostsList = document.getElementById('recent-posts-list');
             recentPostsList.innerHTML = ''; // Clear existing posts
     
-            posts.forEach(post => {
+            if (posts.length === 0) {
+                recentPostsList.innerHTML = '<li style="color: #94a3b8; font-style: italic;">No recent posts available.</li>';
+                return;
+            }
+    
+            posts.forEach((post, index) => {
                 const listItem = document.createElement('li');
+                listItem.style.cssText = 'margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #e9ecef;';
+                if (index === posts.length - 1) {
+                    listItem.style.borderBottom = 'none';
+                    listItem.style.marginBottom = '0';
+                    listItem.style.paddingBottom = '0';
+                }
+                
+                const publishDate = new Date(post.publishDate);
+                const formattedDate = publishDate.toLocaleDateString('en-US', { 
+                    month: 'short', 
+                    day: 'numeric',
+                    year: 'numeric'
+                });
+                
                 listItem.innerHTML = `
-                    <div class="post-pic">
-                        <img src="${post.image}" alt="${post.title}">
-                    </div>
-                    <div class="details">
-                        <h4><a href="/blog-details.html?blogId=${post._id}">${post.title}</a></h4>
-                        <span>${new Date(post.publishDate).toLocaleDateString()}</span>
+                    <div style="display: flex; gap: 15px; align-items: flex-start;">
+                        <div style="flex-shrink: 0; width: 80px; height: 80px; border-radius: 8px; overflow: hidden;">
+                            <img src="${post.image || 'assets/images/default-blog.jpg'}" alt="${post.title}" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div style="flex: 1; min-width: 0;">
+                            <h4 style="margin: 0 0 8px 0; font-size: 14px; line-height: 1.4;">
+                                <a href="/blog-details.html?blogId=${post._id}" style="color: #1a202c; text-decoration: none; font-weight: 600; transition: color 0.3s; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">${post.title}</a>
+                            </h4>
+                            <span style="color: #94a3b8; font-size: 12px; display: flex; align-items: center; gap: 5px;">
+                                <i class="fa fa-calendar" style="font-size: 10px;"></i>
+                                ${formattedDate}
+                            </span>
+                        </div>
                     </div>
                 `;
                 recentPostsList.appendChild(listItem);
