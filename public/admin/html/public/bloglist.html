@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <title>Finvise</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
+
+    <link rel="stylesheet" href="assets/css/feather.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="header">
+            <div class="header-left">
+                <a href="index.html" class="logo">
+                    <img src="assets/img/logo.png" width="35" height="35" alt> <span>Finvise</span>
+                </a>
+            </div>
+            <a id="toggle_btn" href="javascript:void(0);"><img src="assets/img/icons/bar-icon.svg" alt></a>
+            <a id="mobile_btn" class="mobile_btn float-start" href="#sidebar"><img src="assets/img/icons/bar-icon.svg"
+                    alt></a>
+            <div class="top-nav-search mob-view">
+                <form>
+                    <input type="text" class="form-control" placeholder="Search here">
+                    <a class="btn"><img src="assets/img/icons/search-normal.svg" alt></a>
+                </form>
+            </div>
+            <ul class="nav user-menu float-end">
+                <li class="nav-item dropdown d-none d-md-block">
+                    <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown"><img
+                            src="assets/img/icons/note-icon-02.svg" alt><span class="pulse"></span> </a>
+
+                </li>
+                <li class="nav-item dropdown d-none d-md-block">
+                    <a href="javascript:void(0);" id="open_msg_box" class="hasnotifications nav-link"><img
+                            src="assets/img/icons/note-icon-01.svg" alt><span class="pulse"></span> </a>
+                </li>
+                <li class="nav-item dropdown has-arrow user-profile-list">
+                    <a href="#" class="dropdown-toggle nav-link user-link" data-bs-toggle="dropdown">
+                        <div class="user-names">
+                            <h5 id="username"></h5>
+                            <span id="userrole"></span>
+                        </div>
+                        <span class="user-img">
+                            <img src="assets/img/user-06.jpg" alt="Admin">
+                        </span>
+                    </a>
+                    <!-- <div class="dropdown-menu">
+                        <a class="dropdown-item" href="profile.html">My Profile</a>
+                        <a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
+                        <a class="dropdown-item" href="settings.html">Settings</a>
+                        <a class="dropdown-item" href="login.html">Logout</a>
+                    </div> -->
+                </li>
+                <!-- <li class="nav-item ">
+                    <a href="settings.html" class="hasnotifications nav-link"><img
+                            src="assets/img/icons/setting-icon-01.svg" alt> </a>
+                </li> -->
+            </ul>
+            <div class="dropdown mobile-user-menu float-end">
+                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i
+                        class="fa-solid fa-ellipsis-vertical"></i></a>
+                <!-- <div class="dropdown-menu dropdown-menu-end">
+                    <a class="dropdown-item" href="profile.html">My Profile</a>
+                    <a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
+                    <a class="dropdown-item" href="settings.html">Settings</a>
+                    <a class="dropdown-item" href="login.html">Logout</a>
+                </div> -->
+            </div>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li class="menu-title">Main</li>
+                        <li class="submenu">
+                            <a href="#"><span class="menu-side"><img src="assets/img/icons/menu-icon-01.svg" alt></span>
+                                <span> Dashboard </span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <ul>
+                                    <li><a href="index.html">Admin Dashboard</a></li>
+                                </ul>
+                                <li><a href="bloglist.html">All Blogs</a></li>
+                                <li><a href="add-blog.html">Add Blog </a></li>
+                                <li><a href="add-client.html">Add Clients</a></li>
+                                <li><a href="client.html">All Client </a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <div class="logout-btn">
+                        <a href="javascript:void(0);" id="logoutBtn">
+                            <span class="menu-side">
+                                <img src="assets/img/icons/logout.svg" alt>
+                            </span>
+                            <span>Logout</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-wrapper">
+            <div class="content">
+
+                <div class="page-header">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="patients.html">Blog </a></li>
+                                <li class="breadcrumb-item"><i class="feather-chevron-right"></i></li>
+                                <li class="breadcrumb-item active">Blog List</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card card-table show-entire">
+                            <div class="card-body">
+
+                                <div class="page-table-header mb-2">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            <div class="doctor-table-blk">
+                                                <h3>Blog List</h3>
+                                                <div class="doctor-search-blk">
+                                                    <div class="top-nav-search table-search-blk">
+                                                        <form>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Search here">
+                                                            <a class="btn"><img src="assets/img/icons/search-normal.svg"
+                                                                    alt></a>
+                                                        </form>
+                                                    </div>
+                                                    <div class="add-group">
+                                                        <a href="add-patient.html"
+                                                            class="btn btn-primary add-pluss ms-2"><img
+                                                                src="assets/img/icons/plus.svg" alt></a>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="table-responsive">
+                                    <table class="table border-0 custom-table comman-table datatable mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <div class="form-check check-tables">
+                                                        <input class="form-check-input" type="checkbox"
+                                                            value="something">
+                                                    </div>
+                                                </th>
+                                                <th>Title</th>
+                                                <th>Category</th>
+                                                <th>Author</th>
+                                                <th>Publish Date</th>
+                                                <th>Images</th>
+                                                <th>Actions</th> <!-- Added action column -->
+                                            </tr>
+                                        </thead>
+                                        <tbody id="blogs-container">
+                                            <!-- Fetched blogs will be populated here -->
+                                        </tbody>
+                                    </table>
+                                    <!-- Delete Confirmation Modal -->
+                                    <div class="modal fade" id="delete_patient" tabindex="-1"
+                                        aria-labelledby="deletePatientLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="deletePatientLabel">Delete Blog</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Are you sure you want to delete this blog?
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Cancel</button>
+                                                    <button type="button" class="btn btn-danger"
+                                                        onclick="deleteBlog()">Delete</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Modal for Deleting Blog -->
+        <div class="modal fade" id="delete_patient" tabindex="-1" aria-labelledby="deletePatientLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deletePatientLabel">Delete Blog</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Are you sure you want to delete this blog?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-danger" onclick="deleteBlog()">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-overlay" data-reff></div>
+    <script>
+ fetch('/api/check-auth')
+            .then(response => response.json())
+            .then(data => {
+                if (!data.isAuthenticated) {
+                    window.location.href = '/admin/html/public/login.html'; // Redirect to login if not authenticated
+                }
+            })
+            .catch(err => console.error('Error checking auth status:', err));
+    
+        // Logout functionality
+        document.getElementById('logoutBtn').addEventListener('click', function () {
+            console.log("Logout button clicked");
+            fetch('/api/logout')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.message === 'Logout successful') {
+                        window.location.href = '/admin/html/public/login.html'; // Redirect to login page after logout
+                    } else {
+                        console.error('Logout failed:', data);
+                        alert('Logout failed. Please try again.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error during logout:', error);
+                    alert('Error during logout. Please try again.');
+                });
+        });
+    
+        let blogIdToDelete = ''; // Global variable to store the blog ID to delete
+
+        async function fetchBlogs() {
+            try {
+                const response = await fetch('/blogs');
+                const blogs = await response.json();
+                console.log('Fetched blogs:', blogs); // Log the fetched blogs
+
+                const blogsContainer = document.getElementById('blogs-container');
+                blogsContainer.innerHTML = '';
+
+                blogs.forEach(blog => {
+                    // Log the raw image path
+                    console.log('Raw Image Path:', blog.image);
+
+                    // Ensure the image path is correctly formatted
+                    let imageUrl = ''; // Initialize imageUrl
+                    if (blog.image) {
+                        const imagePath = blog.image.replace(/\\/g, '/'); // Replace backslashes with forward slashes
+                        imageUrl = imagePath.startsWith('uploads/') ? `/${imagePath}` : `/uploads/${imagePath}`; // Construct the URL
+                        console.log('Constructed Image URL:', imageUrl); // Log the constructed URL
+                    } else {
+                        imageUrl = '/path/to/default/image.jpg'; // Provide a default image URL or leave it blank
+                    }
+
+                    const blogElement = document.createElement('tr');
+                    blogElement.innerHTML = `
+                <td>
+                    <div class="form-check check-tables">
+                        <input class="form-check-input" type="checkbox" value="something">
+                    </div>
+                </td>
+                <td>${blog.title}</td>
+                <td>${blog.category}</td>
+                <td>${blog.author}</td>
+                <td>${new Date(blog.publishDate).toDateString()}</td>
+                <td>
+                    <img src="${imageUrl}" alt="${blog.title}" style="width: 100px; height: auto;">
+                    <span class="error-message" style="display:none; color:red;">Image not found</span>
+                </td>
+                <td>
+                    <div class="dropdown dropdown-action">
+                        <a href="#" class="action-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-ellipsis-v"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item" href="edit-blog.html?id=${blog._id}">
+                                <i class="fa-solid fa-pen-to-square m-r-5"></i> Edit
+                            </a>
+                            <a class="dropdown-item" href="#" onclick="setBlogId('${blog._id}')" data-bs-toggle="modal" data-bs-target="#delete_patient">
+                                <i class="fa fa-trash-alt m-r-5"></i> Delete
+                            </a>
+                        </div>
+                    </div>
+                </td>
+            `;
+
+                    // Create an image element and check if it's loading
+                    const imgElement = blogElement.querySelector('img');
+                    imgElement.onerror = () => {
+                        imgElement.style.display = 'none'; // Hide the image if it fails to load
+                        const errorMessage = blogElement.querySelector('.error-message');
+                        errorMessage.style.display = 'inline'; // Show the error message
+                    };
+
+                    blogsContainer.appendChild(blogElement);
+                });
+            } catch (error) {
+                console.error('Error fetching blogs:', error);
+            }
+        }
+
+        // Function to set the blog ID for deletion
+        function setBlogId(blogId) {
+            blogIdToDelete = blogId; // Store the blog ID globally
+        }
+
+        // Function to delete the blog
+        async function deleteBlog() {
+            try {
+                const response = await fetch(`/blogs/${blogIdToDelete}`, {
+                    method: 'DELETE',
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to delete blog: ' + response.statusText);
+                }
+
+                console.log('Blog deleted successfully!');
+
+                // Refresh the blogs list after deletion
+                await fetchBlogs();
+
+                // Optionally, close the modal after deletion
+                const modal = bootstrap.Modal.getInstance(document.getElementById('delete_patient'));
+                modal.hide(); // Hide the modal
+            } catch (error) {
+                console.error('Error deleting blog:', error);
+            }
+        }
+
+        // Call fetchBlogs when the page loads
+        window.onload = fetchBlogs;
+
+    </script>
+
+
+
+    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="assets/js/jquery-3.7.1.min.js" type="353cb750eeea2ef3f47714e3-text/javascript"></script>
+    <script src="assets/js/bootstrap.bundle.min.js" type="353cb750eeea2ef3f47714e3-text/javascript"></script>
+    <script src="assets/js/feather.min.js" type="353cb750eeea2ef3f47714e3-text/javascript"></script>
+    <script src="assets/js/jquery.slimscroll.js" type="353cb750eeea2ef3f47714e3-text/javascript"></script>
+    <script src="assets/plugins/datatables/jquery.dataTables.min.js"
+        type="353cb750eeea2ef3f47714e3-text/javascript"></script>
+    <script src="assets/plugins/datatables/datatables.min.js" type="353cb750eeea2ef3f47714e3-text/javascript"></script>
+    <script src="assets/js/app.js" type="353cb750eeea2ef3f47714e3-text/javascript"></script>
+    <script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
+        data-cf-settings="353cb750eeea2ef3f47714e3-|49" defer></script>
+</body>
+
+
+
+<!-- Mirrored from landlordshub.web.app/preclinic.dreamstechnologies.com/html/public/patients.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Jul 2024 15:46:07 GMT -->
+
+</html>

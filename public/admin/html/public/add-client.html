@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from preclinic.dreamstechnologies.com/html/template/add-patient.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Apr 2024 07:41:22 GMT -->
+
+
+<!-- Mirrored from landlordshub.web.app/preclinic.dreamstechnologies.com/html/public/add-patient.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Jul 2024 15:46:07 GMT -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <title>Finvise Admin</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/select2.min.css">
+
+    <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+
+    <link rel="stylesheet" href="assets/css/feather.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="header">
+            <div class="header-left">
+                <a href="index.html" class="logo">
+                    <img src="assets/img/logo.png" width="35" height="35" alt> <span>Finvise</span>
+                </a>
+            </div>
+            <a id="toggle_btn" href="javascript:void(0);"><img src="assets/img/icons/bar-icon.svg" alt></a>
+            <a id="mobile_btn" class="mobile_btn float-start" href="#sidebar"><img src="assets/img/icons/bar-icon.svg"
+                    alt></a>
+            <div class="top-nav-search mob-view">
+                <form>
+                    <input type="text" class="form-control" placeholder="Search here">
+                    <a class="btn"><img src="assets/img/icons/search-normal.svg" alt></a>
+                </form>
+            </div>
+            <ul class="nav user-menu float-end">
+                <li class="nav-item dropdown d-none d-md-block">
+                    <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown"><img
+                            src="assets/img/icons/note-icon-02.svg" alt><span class="pulse"></span> </a>
+                   
+                </li>
+                <li class="nav-item dropdown d-none d-md-block">
+                    <a href="javascript:void(0);" id="open_msg_box" class="hasnotifications nav-link"><img
+                            src="assets/img/icons/note-icon-01.svg" alt><span class="pulse"></span> </a>
+                </li>
+                <li class="nav-item dropdown has-arrow user-profile-list">
+                    <a href="#" class="dropdown-toggle nav-link user-link" data-bs-toggle="dropdown">
+                        <div class="user-names">
+                            <h5 id="username"></h5>
+                            <span id="userrole"></span>
+                        </div>
+                        <span class="user-img">
+                            <img src="assets/img/user-06.jpg" alt="Admin">
+                        </span>
+                    </a>
+                    <!-- <div class="dropdown-menu">
+                        <a class="dropdown-item" href="profile.html">My Profile</a>
+                        <a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
+                        <a class="dropdown-item" href="settings.html">Settings</a>
+                        <a class="dropdown-item" href="login.html">Logout</a>
+                    </div> -->
+                </li>
+                <!-- <li class="nav-item ">
+                    <a href="settings.html" class="hasnotifications nav-link"><img
+                            src="assets/img/icons/setting-icon-01.svg" alt> </a>
+                </li> -->
+            </ul>
+            <div class="dropdown mobile-user-menu float-end">
+                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i
+                        class="fa-solid fa-ellipsis-vertical"></i></a>
+                <!-- <div class="dropdown-menu dropdown-menu-end">
+                    <a class="dropdown-item" href="profile.html">My Profile</a>
+                    <a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
+                    <a class="dropdown-item" href="settings.html">Settings</a>
+                    <a class="dropdown-item" href="login.html">Logout</a>
+                </div> -->
+            </div>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li class="menu-title">Main</li>
+                        <li class="submenu">
+                            <a href="#"><span class="menu-side"><img src="assets/img/icons/menu-icon-01.svg" alt></span>
+                                <span> Dashboard </span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <ul>
+                                    <li><a href="index.html">Admin Dashboard</a></li>
+                                </ul>
+                                <li><a href="bloglist.html">All Blogs</a></li>
+                                <li><a href="add-blog.html">Add Blog </a></li>
+                                <li><a href="client.html">All Clients</a></li>
+                                <li><a href="add-client.html">Add Client </a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <div class="logout-btn">
+                        <a href="javascript:void(0);" id="logoutBtn">
+                            <span class="menu-side">
+                                <img src="assets/img/icons/logout.svg" alt>
+                            </span>
+                            <span>Logout</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-wrapper">
+            <div class="content">
+
+                <div class="page-header">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="patients.html">Client Logo </a></li>
+                                <li class="breadcrumb-item"><i class="feather-chevron-right"></i></li>
+                                <li class="breadcrumb-item active">Add Logo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                               
+                                <form action="/add-logo" method="POST" enctype="multipart/form-data">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-heading">
+                                                <h4>Logo Details</h4>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-xl-6">
+                                            <div class="input-block local-forms">
+                                                <label for="logoNameInput">Logo Name <span class="login-danger">*</span></label>
+                                                <input id="logoNameInput" name="logoName" class="form-control" type="text" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-xl-6">
+                                            <div class="input-block local-forms">
+                                                <label for="date">Date <span class="login-danger">*</span></label>
+                                                <input type="date" name="date" class="form-control" id="checkingDateInput" required> <!-- Change publishDate to date -->
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-12 col-md-6 col-xl-12">
+                                            <div class="input-block local-top-form">
+                                                <label for="image" style="margin-bottom: 8px;">Image Upload <span class="login-danger">*</span></label>
+                                                <input class="form-control form-control-lg" type="file" name="image" required>
+                                                <label id="imageFileName" style="margin-top: 8px; display: block;">No file chosen</label>
+                                            </div>
+                                        </div>
+                                
+                                        <div class="col-12">
+                                            <div class="doctor-submit text-end">
+                                                <button type="submit" class="btn btn-primary submit-form me-2">Submit</button>
+                                                <button type="button" class="btn btn-primary cancel-form" onclick="cancelAddTenant()">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                
+
+                                <script>
+                                    document.getElementById('image').addEventListener('change', function () {
+                                        const fileName = this.files[0] ? this.files[0].name : 'No file chosen';
+                                        document.getElementById('imageFileName').textContent = fileName;
+                                    });
+                                </script>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="delete_patient" class="modal fade delete-modal" role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <img src="assets/img/sent.png" alt width="50" height="46">
+                        <h3>Are you sure want to delete this ?</h3>
+                        <div class="m-t-20"> <a href="#" class="btn btn-white" data-bs-dismiss="modal">Close</a>
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-overlay" data-reff></div>
+    <script>
+           fetch('/api/check-auth')
+            .then(response => response.json())
+            .then(data => {
+                if (!data.isAuthenticated) {
+                    window.location.href = '/admin/html/public/login.html'; // Redirect to login if not authenticated
+                }
+            })
+            .catch(err => console.error('Error checking auth status:', err));
+    
+        // Logout functionality
+        document.getElementById('logoutBtn').addEventListener('click', function () {
+            console.log("Logout button clicked");
+            fetch('/api/logout')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.message === 'Logout successful') {
+                        window.location.href = '/admin/html/public/login.html'; // Redirect to login page after logout
+                    } else {
+                        console.error('Logout failed:', data);
+                        alert('Logout failed. Please try again.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error during logout:', error);
+                    alert('Error during logout. Please try again.');
+                });
+        });
+    
+        document.getElementById('tenantForm').addEventListener('submit', async function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const formData = new FormData();
+            const logoName = document.getElementById('logoNameInput').value;
+            const dateInput = document.getElementById('checkingDateInput').value; // This will be in YYYY-MM-DD format
+            const logoImage = document.getElementById('image').files[0]; // Ensure the input ID is correct
+
+            formData.append('logoName', logoName); // Ensure this matches your model
+            formData.append('date', dateInput); // No formatting needed here
+            formData.append('imagePath', logoImage); // Make sure this matches your schema field
+
+            try {
+                const response = await fetch('/add-logo', { // Update endpoint to match the server
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (response.ok) {
+                    alert('Logo added successfully!');
+                    document.getElementById('tenantForm').reset(); // Reset the form after submission
+                    fetchAndDisplayClientLogos(); // Refresh logo list if you have this function
+                } else {
+                    alert('Failed to add logo. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error adding logo:', error);
+                alert('An error occurred while adding the logo.');
+            }
+        });
+    </script>
+
+
+
+
+
+    <script src="../../../../www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="../../../../www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+    <script src="../../../../www.gstatic.com/firebasejs/9.6.7/firebase-database-compat.js"></script>
+    <script src="firebaseConfig.js"></script>
+    <script src="add-tenant.js"></script>
+    <script src="mains.js"></script>
+
+    <script src="assets/js/jquery-3.7.1.min.js" type="2c0ea34716378b86cf19b042-text/javascript"></script>
+    <script src="assets/js/bootstrap.bundle.min.js" type="2c0ea34716378b86cf19b042-text/javascript"></script>
+    <script src="assets/js/feather.min.js" type="2c0ea34716378b86cf19b042-text/javascript"></script>
+    <script src="assets/js/jquery.slimscroll.js" type="2c0ea34716378b86cf19b042-text/javascript"></script>
+    <script src="assets/js/select2.min.js" type="2c0ea34716378b86cf19b042-text/javascript"></script>
+
+    <script src="assets/plugins/moment/moment.min.js" type="2c0ea34716378b86cf19b042-text/javascript"></script>
+    <script src="assets/js/bootstrap-datetimepicker.min.js" type="2c0ea34716378b86cf19b042-text/javascript"></script>
+    <script src="assets/js/app.js" type="2c0ea34716378b86cf19b042-text/javascript"></script>
+    <script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
+        data-cf-settings="2c0ea34716378b86cf19b042-|49" defer></script>
+</body>
+
+<!-- Mirrored from preclinic.dreamstechnologies.com/html/template/add-patient.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Apr 2024 07:41:22 GMT -->
+
+
+<!-- Mirrored from landlordshub.web.app/preclinic.dreamstechnologies.com/html/public/add-patient.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Jul 2024 15:46:07 GMT -->
+
+</html>

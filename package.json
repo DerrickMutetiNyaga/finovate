@@ -1,0 +1,39 @@
+{
+  "name": "vertical",
+  "version": "1.0.0",
+  "description": "A Node.js project for registering users with MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.3",
+    "bcrypt": "^6.0.0",
+    "body-parser": "^1.20.2",
+    "connect-mongo": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "firebase": "^10.13.0",
+    "firebase-admin": "^12.3.1",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.5.3",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^8.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb",
+    "user-registration",
+    "firebase"
+  ]
+}

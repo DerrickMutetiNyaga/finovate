@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from preclinic.dreamstechnologies.com/html/template/add-blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Apr 2024 07:42:00 GMT -->
+
+<!-- Mirrored from landlordshub.web.app/preclinic.dreamstechnologies.com/html/public/add-blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Jul 2024 15:46:45 GMT -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <title>Finvise Admin</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/select2.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/tagsinput.css">
+
+    <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+
+    <link rel="stylesheet" href="assets/css/feather.css">
+
+    <link rel="stylesheet" href="assets/plugins/summernote/summernote-bs5.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <style>
+        .form-row {
+            display: flex;
+            /* Enable flexbox */
+            flex-wrap: wrap;
+            /* Allow wrapping to next line */
+            margin-bottom: 20px;
+            /* Add space between rows */
+        }
+
+        .form-group {
+            flex: 1;
+            /* Take equal space */
+            min-width: 200px;
+            /* Minimum width for each group */
+            margin-right: 10px;
+            /* Space between groups */
+        }
+
+        .small-image {
+            max-width: 200px;
+            height: auto;
+            display: block;
+            /* Ensure the image is displayed as a block element */
+            margin-top: 10px;
+            /* Add some space above the image */
+            margin-bottom: 10px;
+            /* Add space below the image */
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="header">
+            <div class="header-left">
+                <a href="index.html" class="logo">
+                    <img src="assets/img/logo.png" width="35" height="35" alt> <span>Finvise</span>
+                </a>
+            </div>
+            <a id="toggle_btn" href="javascript:void(0);"><img src="assets/img/icons/bar-icon.svg" alt></a>
+            <a id="mobile_btn" class="mobile_btn float-start" href="#sidebar"><img src="assets/img/icons/bar-icon.svg"
+                    alt></a>
+            <div class="top-nav-search mob-view">
+                <form>
+                    <input type="text" class="form-control" placeholder="Search here">
+                    <a class="btn"><img src="assets/img/icons/search-normal.svg" alt></a>
+                </form>
+            </div>
+            <ul class="nav user-menu float-end">
+                <li class="nav-item dropdown d-none d-md-block">
+                    <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown"><img
+                            src="assets/img/icons/note-icon-02.svg" alt><span class="pulse"></span> </a>
+                    
+                </li>
+                <li class="nav-item dropdown d-none d-md-block">
+                    <a href="javascript:void(0);" id="open_msg_box" class="hasnotifications nav-link"><img
+                            src="assets/img/icons/note-icon-01.svg" alt><span class="pulse"></span> </a>
+                </li>
+                <li class="nav-item dropdown has-arrow user-profile-list">
+                    <a href="#" class="dropdown-toggle nav-link user-link" data-bs-toggle="dropdown">
+                        
+                        <span class="user-img">
+                            <img src="assets/img/user-06.jpg" alt="Admin">
+                        </span>
+                    </a>
+                    <!-- <div class="dropdown-menu">
+                        <a class="dropdown-item" href="profile.html">My Profile</a>
+                        <a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
+                        <a class="dropdown-item" href="settings.html">Settings</a>
+                        <a class="dropdown-item" href="login.html">Logout</a>
+                    </div> -->
+                </li>
+                <!-- <li class="nav-item ">
+                    <a href="settings.html" class="hasnotifications nav-link"><img
+                            src="assets/img/icons/setting-icon-01.svg" alt> </a>
+                </li> -->
+            </ul>
+            <div class="dropdown mobile-user-menu float-end">
+                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i
+                        class="fa-solid fa-ellipsis-vertical"></i></a>
+                <!-- <div class="dropdown-menu dropdown-menu-end">
+                    <a class="dropdown-item" href="profile.html">My Profile</a>
+                    <a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
+                    <a class="dropdown-item" href="settings.html">Settings</a>
+                    <a class="dropdown-item" href="login.html">Logout</a>
+                </div> -->
+            </div>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li class="menu-title">Main</li>
+                        <li class="submenu">
+                            <a href="#"><span class="menu-side"><img src="assets/img/icons/menu-icon-01.svg" alt></span>
+                                <span> Dashboard </span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <ul>
+                                    <li><a href="index.html">Admin Dashboard</a></li>
+                                </ul>
+                                <li><a href="bloglist.html">All Blogs</a></li>
+                                <li><a href="add-blog.html">Add Blog </a></li>
+                                <li><a href="add-client.html">All Clients</a></li>
+                                <li><a href="client.html">Add Client </a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <div class="logout-btn">
+                        <a href="javascript:void(0);" id="logoutBtn">
+                            <span class="menu-side">
+                                <img src="assets/img/icons/logout.svg" alt>
+                            </span>
+                            <span>Logout</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-wrapper">
+            <div class="content">
+
+                <div class="page-header">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="blog.html">Blog </a></li>
+                                <li class="breadcrumb-item"><i class="feather-chevron-right"></i></li>
+                                <li class="breadcrumb-item active">Add Blogs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <form method="POST" action="/edit-blog" enctype="multipart/form-data">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-heading">
+                                                <h4>Blog Details</h4>
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="blogId" id="blogId">
+
+                                        <div class="col-12 col-md-6 col-xl-6">
+                                            <div class="input-block local-forms">
+                                                <label>Blog Title <span class="login-danger">*</span></label>
+                                                <input class="form-control" type="text" name="title"
+                                                    placeholder="Blog Title">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 col-xl-6">
+                                            <div class="input-block local-forms">
+                                                <label>Author Name <span class="login-danger">*</span></label>
+                                                <input class="form-control" type="text" name="author"
+                                                    placeholder="Author Name">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 col-xl-6">
+                                            <div class="input-block local-forms">
+                                                <label>Blog Category <span class="login-danger">*</span></label>
+                                                <select class="form-control select" name="category" required>
+                                                    <option value="" disabled selected>Choose Blog Category</option>
+                                                    <option value="Health Care">Health Care</option>
+                                                    <option value="Child">Child</option>
+                                                    <option value="Safety">Safety</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 col-xl-6">
+                                            <div class="input-block local-forms">
+                                                <label for="slug">Slug <small>(Auto Generated)</small></label>
+                                                <input type="text" name="slug" placeholder="Slug" class="form-control"
+                                                    id="slug">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 col-xl-6">
+                                            <div class="input-block local-forms">
+                                                <label>Tags <small>(separated with a comma)</small> <span
+                                                        class="login-danger">*</span></label>
+                                                <input type="text" name="tags" class="form-control"
+                                                    placeholder="tag1, tag2, tag3">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 col-xl-6">
+                                            <div class="input-block local-forms">
+                                                <label for="publish-date">Publish Date</label>
+                                                <input type="date" name="publishDate" class="form-control"
+                                                    id="publish-date">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 col-xl-12">content
+                                            <div class="input-block summer-mail">
+                                                <textarea rows="4" cols="5" class="form-control summernote"
+                                                    name="content" id="blogContent"
+                                                    placeholder="Enter your message here">
+                                                    <div id="blogContentDisplay" class="content-display"></div>
+                                                </textarea>
+
+                                            </div>
+                                            <!-- Optional: For displaying rendered content -->
+
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="form-group col-12">
+                                                <label class="image-input">Current Image
+                                                    <input type="hidden" name="currentImage" id="currentImagePath" value="">
+                                                    <img src="" alt="" id="currentImage" class="small-image" style="display: none;">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        
+
+                                        <div class="form-row">
+                                            <div class="form-group col-12">
+                                                <label class="local-top">Image Upload <span class="login-danger">*</span></label>
+                                                <div class="settings-btn upload-files-avator">
+                                                    <input type="file" accept="image/*" name="image" id="file" class="hide-input" onchange="displayImageName()" required>
+                                                    <label for="file" class="upload">Choose File</label>
+                                                </div>
+                                                <span id="imageName" class="image-name-display"></span> <!-- Element to display selected image name -->
+                                                <div class="invalid-feedback">Please upload an image.</div> <!-- Optional feedback for validation -->
+                                            </div>
+                                        </div>
+                                        
+                                        
+
+                                        <div class="form-row">
+                                            <div class="doctor-submit text-end col-12">
+                                                <button type="submit" class="btn btn-primary submit-form me-2">Publish
+                                                    Blog</button>
+                                                <button type="button" class="btn btn-primary cancel-form"
+                                                    onclick="window.history.back()">Cancel</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="delete_patient" class="modal fade delete-modal" role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <img src="assets/img/sent.png" alt width="50" height="46">
+                        <h3>Are you sure want to delete this ?</h3>
+                        <div class="m-t-20"> <a href="#" class="btn btn-white" data-bs-dismiss="modal">Close</a>
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-overlay" data-reff></div>
+
+    <script>
+        fetch('/api/check-auth')
+            .then(response => response.json())
+            .then(data => {
+                if (!data.isAuthenticated) {
+                    window.location.href = '/admin/html/public/login.html'; // Redirect to login if not authenticated
+                }
+            })
+            .catch(err => console.error('Error checking auth status:', err));
+    
+        // Logout functionality
+        document.getElementById('logoutBtn').addEventListener('click', function () {
+            console.log("Logout button clicked");
+            fetch('/api/logout')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.message === 'Logout successful') {
+                        window.location.href = '/admin/html/public/login.html'; // Redirect to login page after logout
+                    } else {
+                        console.error('Logout failed:', data);
+                        alert('Logout failed. Please try again.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error during logout:', error);
+                    alert('Error during logout. Please try again.');
+                });
+        });
+    
+        async function fetchBlogData() {
+            console.log("Current URL:", window.location.href); // Log the current URL
+            const blogId = new URLSearchParams(window.location.search).get('id'); // Get the blog ID from the URL
+            if (!blogId) {
+                console.error('Blog ID is missing from the URL.');
+                return;
+            }
+    
+            try {
+                const response = await fetch(`/api/blogs/${blogId}`); // Ensure correct endpoint
+                if (!response.ok) {
+                    throw new Error('Failed to fetch blog data: ' + response.statusText);
+                }
+                const blog = await response.json(); // Parse the JSON response
+    
+                // Log the fetched blog object to see its contents
+                console.log('Fetched Blog Data:', blog);
+    
+                // Populate the form fields with existing data
+                document.getElementById('blogId').value = blog._id;
+                document.querySelector('input[name="title"]').value = blog.title;
+                document.querySelector('input[name="author"]').value = blog.author;
+                document.querySelector('select[name="category"]').value = blog.category; // Make sure the category is correctly fetched
+                document.querySelector('input[name="slug"]').value = blog.slug;
+                document.querySelector('input[name="tags"]').value = blog.tags.join(', ');
+                document.querySelector('input[name="publishDate"]').value = new Date(blog.publishDate).toISOString().split('T')[0];
+    
+                // Populate the content in the textarea
+                document.getElementById('blogContent').value = blog.content || ''; // Textarea for editing
+    
+                // Optional: Display the HTML content
+                document.getElementById('blogContentDisplay').innerHTML = blog.content || ''; // Rendered display
+    
+                // Ensure the image path is correctly formatted
+                const imagePath = blog.image ? blog.image.replace(/\\/g, '/') : ''; // Check if image exists
+                const imageUrl = imagePath.startsWith('uploads/') ? `/${imagePath}` : `/uploads/${imagePath}`; // Construct the URL
+                console.log('Constructed Image URL:', imageUrl); // Log the constructed URL
+    
+                // Display the current image
+                const currentImage = document.getElementById('currentImage');
+                currentImage.src = imageUrl; // Use the constructed image URL
+                currentImage.alt = 'Current Blog Image'; // Set an alt text for accessibility
+                currentImage.style.display = 'block'; // Ensure the image is displayed
+    
+                // Set the hidden input value to the current image URL
+                document.getElementById('currentImagePath').value = imageUrl; // Store current image URL in hidden input
+            } catch (error) {
+                console.error('Error fetching blog data:', error);
+            }
+        }
+    
+        async function handleSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission
+            const blogId = document.getElementById('blogId').value;
+            const formData = new FormData();
+    
+            // Add all necessary fields to formData
+            formData.append('title', document.querySelector('input[name="title"]').value);
+            formData.append('author', document.querySelector('input[name="author"]').value);
+            formData.append('category', document.querySelector('select[name="category"]').value);
+            formData.append('slug', document.querySelector('input[name="slug"]').value);
+            formData.append('tags', document.querySelector('input[name="tags"]').value);
+            formData.append('publishDate', document.querySelector('input[name="publishDate"]').value);
+            formData.append('content', document.getElementById('blogContent').value);
+    
+            const imageInput = document.getElementById('file'); // The file input
+            if (imageInput.files[0]) {
+                // If a new image is selected, append it to the form data
+                formData.append('image', imageInput.files[0]);
+            } else {
+                // If no new image is uploaded, append the current image URL
+                const currentImagePath = document.getElementById('currentImagePath').value; // Get the current image URL
+                formData.append('image', currentImagePath);
+            }
+    
+            // Send the update request
+            try {
+                const response = await fetch(`/blogs/${blogId}`, {
+                    method: 'PUT', // or 'PATCH' depending on your API
+                    body: formData
+                });
+    
+                if (!response.ok) {
+                    throw new Error('Failed to update blog: ' + response.statusText);
+                }
+    
+                // Handle successful update (e.g., redirect, show message)
+                console.log('Blog updated successfully!');
+                // Redirect to the blog list or display a success message here
+            } catch (error) {
+                console.error('Error updating blog:', error);
+            }
+        }
+    
+        // Function to display the name of the selected image
+        function displayImageName() {
+            const fileInput = document.getElementById('file');
+            const imageNameDisplay = document.getElementById('imageName');
+            if (fileInput.files.length > 0) {
+                imageNameDisplay.textContent = fileInput.files[0].name; // Show the name of the selected file
+            } else {
+                imageNameDisplay.textContent = ''; // Clear the name if no file is selected
+            }
+        }
+    
+        // Call the function when the page loads
+        window.onload = fetchBlogData;
+    
+        // Add event listener for form submission
+        document.getElementById('yourFormId').addEventListener('submit', handleSubmit); // Replace 'yourFormId' with the actual form ID
+    </script>
+    
+    
+    
+
+
+
+
+
+
+    <script src="assets/js/jquery-3.7.1.min.js" type="33ef6c084409f54f36135164-text/javascript"></script>
+    <script src="assets/js/bootstrap.bundle.min.js" type="33ef6c084409f54f36135164-text/javascript"></script>
+    <script src="assets/js/feather.min.js" type="33ef6c084409f54f36135164-text/javascript"></script>
+    <script src="assets/js/jquery.slimscroll.js" type="33ef6c084409f54f36135164-text/javascript"></script>
+    <script src="assets/js/select2.min.js" type="33ef6c084409f54f36135164-text/javascript"></script>
+    <script src="assets/js/tagsinput.js" type="33ef6c084409f54f36135164-text/javascript"></script>
+
+    <script src="assets/plugins/moment/moment.min.js" type="33ef6c084409f54f36135164-text/javascript"></script>
+    <script src="assets/js/bootstrap-datetimepicker.min.js" type="33ef6c084409f54f36135164-text/javascript"></script>
+
+    <script src="assets/plugins/summernote/summernote-bs5.min.js"
+        type="33ef6c084409f54f36135164-text/javascript"></script>
+    <script src="assets/js/app.js" type="33ef6c084409f54f36135164-text/javascript"></script>
+    <script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
+        data-cf-settings="33ef6c084409f54f36135164-|49" defer></script>
+</body>
+
+
+</html>

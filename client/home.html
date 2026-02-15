@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="themexriver">
+
+    <!-- Page Title -->
+    <title> Finvise Consulting - Consulting Finance Business </title>
+
+    <!-- Favicon and Touch Icons -->
+    <link href="assets/images/favicon/favicon.png" rel="shortcut icon" type="image/png">
+    <link href="assets/images/favicon/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+    <link href="assets/images/favicon/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="assets/images/favicon/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="assets/images/favicon/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+
+    <!-- Icon fonts -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/flaticon.css" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Plugins for this template -->
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="assets/css/owl.carousel.css" rel="stylesheet">
+    <link href="assets/css/owl.theme.css" rel="stylesheet">
+    <link href="assets/css/slick.css" rel="stylesheet">
+    <link href="assets/css/slick-theme.css" rel="stylesheet">
+    <link href="assets/css/owl.transitions.css" rel="stylesheet">
+    <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-select.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+<!-- 
+    <style>
+        h2 {
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Slider */
+
+        .slick-slide {
+            margin: 0px 20px;
+        }
+
+        .slick-slide img {
+            width: 100%;
+        }
+
+        .slick-slider {
+            position: relative;
+            display: block;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-touch-callout: none;
+            -khtml-user-select: none;
+            -ms-touch-action: pan-y;
+            touch-action: pan-y;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .slick-list {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        .slick-list:focus {
+            outline: none;
+        }
+
+        .slick-list.dragging {
+            cursor: pointer;
+            cursor: hand;
+        }
+
+        .slick-slider .slick-track,
+        .slick-slider .slick-list {
+            -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+            -ms-transform: translate3d(0, 0, 0);
+            -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+
+        .slick-track {
+            position: relative;
+            top: 0;
+            left: 0;
+            display: block;
+        }
+
+        .slick-track:before,
+        .slick-track:after {
+            display: table;
+            content: '';
+        }
+
+        .slick-track:after {
+            clear: both;
+        }
+
+        .slick-loading .slick-track {
+            visibility: hidden;
+        }
+
+        .slick-slide {
+            display: none;
+            float: left;
+            height: 100%;
+            min-height: 1px;
+        }
+
+        [dir='rtl'] .slick-slide {
+            float: right;
+        }
+
+        .slick-slide img {
+            display: block;
+        }
+
+        .slick-slide.slick-loading img {
+            display: none;
+        }
+
+        .slick-slide.dragging img {
+            pointer-events: none;
+        }
+
+        .slick-initialized .slick-slide {
+            display: block;
+        }
+
+        .slick-loading .slick-slide {
+            visibility: hidden;
+        }
+
+        .slick-vertical .slick-slide {
+            display: block;
+            height: auto;
+            border: 1px solid transparent;
+        }
+
+        .slick-arrow.slick-hidden {
+            display: none;
+        }
+    </style> -->
+    <style>
+        .contact-location-map {
+            position: relative;
+            height: 450px;
+            /* Adjust height as needed */
+            margin-bottom: 20px;
+            /* Space between map and contact form */
+        }
+
+        .map-container {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            /* Remove default border */
+        }
+
+        /* Enhanced Banner Design */
+        .hero {
+            height: 70vh !important;
+            min-height: 500px !important;
+        }
+
+        @media (max-width: 991px) {
+            .hero {
+                height: 60vh !important;
+                min-height: 450px !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .hero {
+                height: 50vh !important;
+                min-height: 400px !important;
+            }
+        }
+
+        .hero .slide {
+            position: relative;
+            overflow: hidden;
+            height: 70vh !important;
+            min-height: 500px !important;
+        }
+
+        @media (max-width: 991px) {
+            .hero .slide {
+                height: 60vh !important;
+                min-height: 450px !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .hero .slide {
+                height: 50vh !important;
+                min-height: 400px !important;
+            }
+        }
+
+        .hero .slide .slider-bg {
+            display: block !important;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            animation: zoomIn 15s ease-in-out infinite alternate;
+        }
+
+        @keyframes zoomIn {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        .hero .slide:before {
+            content: "";
+            background: linear-gradient(135deg, rgba(1, 47, 92, 0.85) 0%, rgba(1, 18, 67, 0.75) 50%, rgba(0, 0, 0, 0.6) 100%);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 2;
+        }
+
+        .hero .slide .container {
+            position: relative;
+            z-index: 3;
+        }
+
+        .hero .slide-caption {
+            position: relative;
+            z-index: 4;
+        }
+
+        .hero .slide-caption h2 {
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            letter-spacing: -1px;
+        }
+
+        @media (max-width: 1199px) {
+            .hero .slide-caption h2 {
+                font-size: 52px;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .hero .slide-caption h2 {
+                font-size: 42px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .hero .slide-caption h2 {
+                font-size: 32px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .hero .slide-caption p {
+            font-size: 20px;
+            line-height: 1.8;
+            margin-bottom: 35px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+            max-width: 600px;
+        }
+
+        @media (max-width: 767px) {
+            .hero .slide-caption p {
+                font-size: 16px;
+                margin-bottom: 25px;
+            }
+        }
+
+        .hero .slide-caption .btns {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 767px) {
+            .hero .slide-caption .btns {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        .hero .slide-caption .theme-btn,
+        .hero .slide-caption .theme-btn-s2 {
+            padding: 16px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 50px;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero .slide-caption .theme-btn {
+            background: linear-gradient(135deg, #fdd415 0%, #ffb300 100%);
+            color: #012f5c;
+            border: 2px solid transparent;
+        }
+
+        .hero .slide-caption .theme-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(253, 212, 21, 0.5);
+            background: linear-gradient(135deg, #ffb300 0%, #fdd415 100%);
+        }
+
+        .hero .slide-caption .theme-btn-s2 {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+
+        .hero .slide-caption .theme-btn-s2:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Enhanced slider navigation */
+        .hero .slick-prev,
+        .hero .slick-next {
+            background-color: rgba(255, 255, 255, 0.9);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero .slick-prev:hover,
+        .hero .slick-next:hover {
+            background-color: #012f5c;
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(1, 47, 92, 0.4);
+        }
+
+        .hero .slick-dots {
+            bottom: 30px;
+        }
+
+        .hero .slick-dots button {
+            background-color: rgba(255, 255, 255, 0.5);
+            width: 12px;
+            height: 12px;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .hero .slick-dots .slick-active button {
+            background-color: #fdd415;
+            width: 16px;
+            height: 16px;
+            border-color: #fdd415;
+        }
+
+        /* Add decorative elements */
+        .hero .slide-caption::before {
+            content: "";
+            position: absolute;
+            left: -50px;
+            top: -30px;
+            width: 150px;
+            height: 150px;
+            background: rgba(253, 212, 21, 0.1);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        /* Smooth transitions for slide changes */
+        .hero .hero-slider .slick-slide {
+            transition: opacity 0.8s ease;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Include jQuery -->
+    <title>Blogs</title>
+
+    <!-- Include Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css" />
+
+    <!-- Include Slick JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- start page-wrapper -->
+    <div class="page-wrapper">
+
+        <!-- start preloader -->
+        <div class="preloader">
+            <div class="inner">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <!-- end preloader -->
+
+        <!-- Start header -->
+        <header id="header" class="site-header header-style-1">
+            <!-- Start header -->
+            <header id="header" class="site-header header-style-4">
+                <div class="topbar" style="background-color: rgb(3, 3, 87);">
+                    <div class="lower-topbar">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col col-sm-3">
+                                    <div class="site-logo">
+                                        <a href="#"><img src="assets/images/logomain.svg" alt></a>
+                                    </div>
+                                </div>
+                                <div class="col col-sm-9">
+                                    <div class="contact-info">
+                                        <div>
+                                            <i class="fa fa-phone-square"></i>
+                                            <div class="details">
+                                                <p style="color: white;">Call us</p>
+                                                <span style="color: white;">+254718 880529</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <i class="fa fa-clock-o"></i>
+                                            <div class="details">
+                                                <p style="color: white;">Working hours</p>
+                                                <span style="color: white;">Mon - Fri: 8 am - 5 pm</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end lower-topbar -->
+                </div> <!-- end topbar -->
+                <nav class="navigation navbar navbar-default">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="open-btn">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse navbar-right navigation-holder">
+                            <button class="close-navbar"><i class="fa fa-close"></i></button>
+                            <ul class="nav navbar-nav">
+                                <li class="menu-item-has-children">
+                                <li><a href="home.html">Home</a></li>
+
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="about.html">About</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Careers</a></li>
+                                        <li><a href="team.html">Team</a></li>
+                                    </ul>
+                                </li>
+
+
+                                <li class="menu-item-has-children">
+                                    <a href="#">Solutions</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="services.html">What We Do</a></li>
+                                        <li class="menu-item-has-children"><a href="#">Financial Advisory</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="financial-modelling.html">Financial Modelling </a></li>
+                                                <li><a href="financial-analysis.html">Financial Analysis</a></li>
+                                                <li><a href="investment-analysis.html">Investment Analysis</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item-has-children"><a href="#">AML/CFT/CPF Risk Advisory</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="risk.html">Risk Assessment</a></li>
+                                                <li><a href="policy.html">Policy, Procedures and Controls
+                                                        Development</a></li>
+                                                <li><a href="assure.html">Risk Assurance</a></li>
+                                                <li><a href="training.html">Training </a></li>
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">Insights</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="report.html">Report & Guidelines</a></li>
+                                        <li><a href="sanction.html">Sanction List</a></li>
+                                        <li><a href="useful.html">Useful links</a></li>
+                                    </ul>
+                                </li>
+                               
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div><!-- end of nav-collapse -->
+                        <div class="search-social">
+                            <div class="header-search-area">
+                                <div class="header-search-form">
+                                    <form class="form">
+                                        <div>
+                                            <input type="text" class="form-control" placeholder="Search here">
+                                        </div>
+                                        <button type="submit" class="btn"><i class="fa fa-search"></i></button>
+                                    </form>
+                                </div>
+                                <div>
+                                    <button class="btn open-btn"><i class="fa fa-search"></i></button>
+                                </div>
+                            </div>
+                            <div class="social">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- end of container -->
+                </nav>
+            </header>
+            <!-- end of header -->
+
+
+            <!-- start of hero -->
+            <section class="hero hero-style-1 hero-slider-wrapper">
+                <div class="hero-slider">
+                    <div class="slide">
+                        <img src="assets/images/mine/slider1.svg" alt class="slider-bg">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col col-md-8 col-sm-9 slide-caption">
+                                    <h2>Your Trusted Partner in Financial Success</h2>
+                                    <p>We provide tailored financial strategies to help you achieve your goals. From
+                                        investment advice to wealth management, we are here to guide you every step of
+                                        the way.</p>
+                                    <div class="btns">
+                                        <a href="about.html" class="theme-btn">Learn More About Us</a>
+                                        <a href="services.html" class="theme-btn-s2">Explore Our Services</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <img src="assets/images/mine/ssu.png" alt class="slider-bg">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col col-md-8 col-sm-9 slide-caption">
+                                    <h2>Your Financial Growth is Our Priority</h2>
+                                    <p>With expert guidance and personalized service, we help individuals and businesses
+                                        navigate the complexities of finance, ensuring long-term success.</p>
+                                    <div class="btns">
+                                        <a href="about.html" class="theme-btn">Learn More About Us</a>
+                                        <a href="services.html" class="theme-btn-s2">Explore Our Services</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <img src="assets/images/mine/lpo.png" alt class="slider-bg">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col col-md-8 col-sm-9 slide-caption">
+                                    <h2>Expert Financial Solutions for Your Future</h2>
+                                    <p>Whether you need advice on investments, retirement planning, or risk management,
+                                        our team of experts is here to help you secure a prosperous future.</p>
+                                    <div class="btns">
+                                        <a href="about.html" class="theme-btn">Learn More About Us</a>
+                                        <a href="services.html" class="theme-btn-s2">Explore Our Services</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- end of hero slider -->
+
+
+            <!-- start services-section -->
+            <section class="services-section section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-xs-12">
+                            <div class="section-title">
+                                <h2>Our Services</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col col-xs-12">
+                            <div class="service-grids">
+                                <div class="grid">
+                                    <div class="img-details-link">
+                                        <div class="details-link">
+                                            <a href="financial-modelling.html"><i class="fa fa-arrow-right"></i></a>
+                                        </div>
+                                        <img src="assets/images/mine/analyse.png" alt="Financial Modelling">
+                                    </div>
+                                    <div class="service-details">
+                                        <h3>Financial Modelling</h3>
+                                        <p>Creating detailed financial models to support business decisions, forecasts,
+                                            and valuations.</p>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="img-details-link">
+                                        <div class="details-link">
+                                            <a href="financial-analysis.html"><i class="fa fa-arrow-right"></i></a>
+                                        </div>
+                                        <img src="assets/images/mine/line.png" alt="Financial Analysis">
+                                    </div>
+                                    <div class="service-details">
+                                        <h3>Financial Analysis</h3>
+                                        <p>Providing in-depth analysis of financial statements and market conditions to
+                                            guide strategic planning.</p>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="img-details-link">
+                                        <div class="details-link">
+                                            <a href="investment-analysis.html"><i class="fa fa-arrow-right"></i></a>
+                                        </div>
+                                        <img src="assets/images/mine/value.png" alt="Investment Analysis">
+                                    </div>
+                                    <div class="service-details">
+                                        <h3>Investment Analysis</h3>
+                                        <p>Evaluating investment opportunities to maximize returns and minimize risks.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="img-details-link">
+                                        <div class="details-link">
+                                            <a href="risk.html"><i class="fa fa-arrow-right"></i></a>
+                                        </div>
+                                        <img src="assets/images/mine/risk.png" alt="Risk Assessment">
+                                    </div>
+                                    <div class="service-details">
+                                        <h3>Risk Assessment</h3>
+                                        <p>Identifying and assessing risks related to AML, CFT, and CPF.</p>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="img-details-link">
+                                        <div class="details-link">
+                                            <a href="assure.html"><i class="fa fa-arrow-right"></i></a>
+                                        </div>
+                                        <img src="assets/images/mine/manage risk.png" alt="Risk Assurance">
+                                    </div>
+                                    <div class="service-details">
+                                        <h3>Risk Assurance</h3>
+                                        <p>Offering assurance services to ensure compliance with AML/CFT/CPF regulations
+                                            and best practices.</p>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="img-details-link">
+                                        <div class="details-link">
+                                            <a href="training.html"><i class="fa fa-arrow-right"></i></a>
+                                        </div>
+                                        <img src="assets/images/mine/training.png" alt="Training">
+                                    </div>
+                                    <div class="service-details">
+                                        <h3>Training</h3>
+                                        <p>Providing comprehensive training programs on risk management, AML/CFT/CPF
+                                            compliance, and related controls.</p>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="img-details-link">
+                                        <div class="details-link">
+                                            <a href="policy.html"><i class="fa fa-arrow-right"></i></a>
+                                        </div>
+                                        <img src="assets/images/mine/control.png"
+                                            alt="Controls, Procedures, and Policy Development">
+                                    </div>
+                                    <div class="service-details">
+                                        <h3>Controls, Procedures, and Policy Development</h3>
+                                        <p>Developing and implementing effective controls, procedures, and policies to
+                                            mitigate financial crimes and ensure regulatory compliance.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end container -->
+            </section>
+
+
+            <!-- end services-section -->
+
+
+            <!-- start cta -->
+            <section class="cta">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-xs-12">
+                            <h2>Learn more about <span>our expertise</span></h2>
+                        </div>
+                    </div>
+                </div> <!-- end container -->
+            </section>
+            <!-- end cta -->
+
+            <!-- start services-section-s2 -->
+            <section class="services-section-s2 section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-md-3">
+                            <div class="services-phone">
+                                <div class="phone-bg"></div>
+                                <img src="assets/images/phone.png" alt="Phone">
+                                <div class="phone-inner">
+                                    <h3>Need <span>clarification?</span></h3>
+                                    <p>We're here to make finance simple for you.</p>
+                                    <a href="#" class="theme-btn-s2">Request a Call Back</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-md-8 col-md-offset-1">
+                            <div class="services-s2-grids">
+                                <div class="grid">
+                                    <div class="inner">
+                                        <div class="icon">
+                                            <i class="fi flaticon-balance"></i>
+                                        </div>
+                                        <div class="details">
+                                            <h3><a href="financial-modelling.html">Financial Modelling</a></h3>
+                                            <p>We craft detailed models to guide your financial decisions, forecasts,
+                                                and valuations.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="inner">
+                                        <div class="icon">
+                                            <i class="fi flaticon-wallet"></i>
+                                        </div>
+                                        <div class="details">
+                                            <h3><a href="financial-analysis.html">Financial Analysis</a></h3>
+                                            <p>Our deep analysis helps you strategize effectively, using your financial
+                                                statements and market insights.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="inner">
+                                        <div class="icon">
+                                            <i class="fi flaticon-calculator"></i>
+                                        </div>
+                                        <div class="details">
+                                            <h3><a href="investment-analysis.html">Investment Analysis</a></h3>
+                                            <p>We assess investment opportunities to help maximize returns and minimize
+                                                risks.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="inner">
+                                        <div class="icon">
+                                            <i class="fi flaticon-credit-card"></i>
+                                        </div>
+                                        <div class="details">
+                                            <h3><a href="risk.html">Risk Assessment</a></h3>
+                                            <p>Identify and manage risks related to AML, CFT, and CPF effectively.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="inner">
+                                        <div class="icon">
+                                            <i class="fi flaticon-computer"></i>
+                                        </div>
+                                        <div class="details">
+                                            <h3><a href="assure.html">Risk Assurance</a></h3>
+                                            <p>We ensure your compliance with AML/CFT/CPF regulations and best
+                                                practices.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="inner">
+                                        <div class="icon">
+                                            <i class="fi flaticon-diamond"></i>
+                                        </div>
+                                        <div class="details">
+                                            <h3><a href="policy.html">Controls, Procedures, and Policy Development</a>
+                                            </h3>
+                                            <p>We establish effective controls, procedures, and policies to combat
+                                                financial crimes and ensure compliance.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end row -->
+                </div> <!-- end container -->
+            </section>
+
+
+
+            <!-- start about-section -->
+            <section class="section-padding about-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-lg-8 col-md-10">
+                            <div class="section-title-s2">
+                                <h2>We deliver exceptional results aligned with our clients' financial goals</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-md-7">
+                            <div class="about-details">
+                                <p>We tailor our strategies to each client's unique financial landscape, focusing on
+                                    innovation, practicality, and personalized solutions that drive sustainable growth
+                                    and long-term success in achieving their financial goals.</p>
+                                <div class="skill-progress-bar">
+                                    <div class="skills">
+                                        <div class="skill">
+                                            <h6>Financial Planning</h6>
+                                            <div class="progress">
+                                                <div class="progress-bar" data-percent="98"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill">
+                                            <h6>Business Strategy</h6>
+                                            <div class="progress">
+                                                <div class="progress-bar" data-percent="98"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill">
+                                            <h6>Investment Management</h6>
+                                            <div class="progress">
+                                                <div class="progress-bar" data-percent="94"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-md-5">
+                            <div class="about-chart">
+                                <img src="assets/images/mine/chart.png" alt>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end container -->
+            </section>
+
+
+            <!-- end about-section -->
+
+            <!-- start partners-section -->
+            <section class="partners-section">
+                <h2 class="hidden">Partners</h2>
+                <div class="container">
+                    <h2>Our Partners</h2>
+                    <section class="customer-logos slider partners-slider">
+                        <!-- Client logos will be dynamically inserted here -->
+                    </section>
+                </div>
+            </section>
+
+
+
+            <!-- end partners-section -->
+
+
+
+
+
+            <!-- start newsletter-section -->
+            <section class="newsletter-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-lg-8 col-md-7">
+                            <h2><span>Subscribe your email</span> for our Newsletter</h2>
+                            <form>
+                                <div>
+                                    <input type="text" class="form-control">
+                                    <button>Subscribe</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="newsletter-man">
+                        <img src="assets/images/mine/man 4.svg" alt>
+                    </div>
+                </div> <!-- end contianer -->
+            </section>
+            <!-- end newsletter-section -->
+
+
+            <!-- start blog-section -->
+            <section class="blog-section section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-md-8 col-md-offset-2">
+                            <div class="section-title-s3">
+                                <h2>Insights </h2>
+                                <p>Stay informed with the latest updates and insights on the Kenyan financial landscape.
+                                    Explore the trends shaping the economy and investment opportunities in the region.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row news-grids" id="recent-blogs">
+                        <!-- Recent blogs will be injected here -->
+                    </div>
+                </div> <!-- end container -->
+            </section>
+
+            <!-- end blog-section -->
+
+
+            <!-- start contact-section -->
+            <section class="contact-section section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-md-6">
+                            <div class="contact-location-map">
+                                <div class="map-container">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345094655!2d36.8006697!3d-1.2882364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10b9cd7cfeb3%3A0x9339239169347a6d!2sAdak+House!5e0!3m2!1sen!2sus!4v1630337568363!5m2!1sen!2sus"
+                                        width="600" height="450" style="border:0;" allowfullscreen=""
+                                        loading="lazy"></iframe>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col col-md-6">
+                            <div class="section-title-s4">
+                                <h2>Request a Callback</h2>
+                                <p>If you have any questions or need assistance, feel free to reach out. Our team is
+                                    here to provide you with expert financial guidance tailored to your needs.</p>
+                            </div>
+
+                            <div class="contact-form">
+                                <form method="post" action="/send-email" id="contact-form"
+                                    class="form row contact-validation-active">
+                                    <div class="col col-sm-6">
+                                        <label for="name">Full Name</label>
+                                        <input type="text" class="form-control" id="name" name="name" required>
+                                    </div>
+                                    <div class="col col-sm-6">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
+                                    </div>
+                                    <div class="col col-sm-6">
+                                        <label for="phone">Phone No</label>
+                                        <input type="text" class="form-control" id="phone" name="phone" required>
+                                    </div>
+                                    <div class="col col-sm-6">
+                                        <label for="business">Business Type</label>
+                                        <select name="business" id="business" class="form-control" required>
+                                            <option selected disabled>Select your business type</option>
+                                            <option>Individual</option>
+                                            <option>Small Business</option>
+                                            <option>Corporate</option>
+                                            <option>Startup</option>
+                                            <option>Non-Profit</option>
+                                        </select>
+                                    </div>
+                                    <div class="col col-xs-12 submit-btn">
+                                        <button type="submit">Submit</button>
+                                        <div id="loader">
+                                            <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
+                                        </div>
+                                    </div>
+                                    <div class="error-handling-messages">
+                                        <div id="success" style="display: none;">Thank you, message sent.</div>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div> <!-- end row -->
+                </div> <!-- end container -->
+            </section>
+
+
+            <!-- Add Google Maps Script -->
+
+            <!-- end contact-section -->
+
+
+            <!-- start site-footer -->
+            <footer class="site-footer">
+                <div class="upper-footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col col-md-4 col-sm-6">
+                                <div class="widget about-widget">
+                                    <div class="footer-logo"><img src="assets/images/logomain.svg"
+                                            alt="Finvice Consulting Logo"></div>
+                                    <p>At Finvice Consulting, we are dedicated to providing expert financial advice
+                                        tailored to your unique needs. Our goal is to help you achieve financial success
+                                        with confidence and clarity.</p>
+                                    <ul class="contact-info">
+                                        <li><i class="fa fa-phone"></i> +254718 880529</li>
+                                        <li><i class="fa fa-envelope"></i> info@finviceconsulting.com</li>
+                                        <li><i class="fa fa-home"></i> Adak House, Jakaya Kikwete, Nairobi, Kenya</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col col-md-2 col-sm-6">
+                                <div class="widget links-widget">
+                                    <h3>Quick Links</h3>
+                                    <ul>
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">Services</a></li>
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">Testimonials</a></li>
+                                        <li><a href="#">News</a></li>
+                                        <li><a href="#">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col col-md-3 col-sm-6">
+                                <div class="widget support-widget">
+                                    <h3>Client Support</h3>
+                                    <ul>
+                                        <li><a href="#">Contact Support</a></li>
+                                        <li><a href="#">Submit a Request</a></li>
+                                        <li><a href="#">Knowledge Base</a></li>
+                                        <li><a href="#">Client Portal</a></li>
+                                        <li><a href="#">Privacy Policy</a></li>
+                                        <li><a href="#">Professional Services</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col col-md-3 col-sm-6">
+                                <div class="widget twitter-feed-widget">
+                                    <h3>Latest Updates</h3>
+                                    <ul>
+                                        <li>
+                                            <div class="text">
+                                                <p>Explore our latest insights on finance and investment strategies for
+                                                    your business.</p>
+                                            </div>
+                                            <div class="info-box">
+                                                <i class="fa fa-twitter"></i>
+                                                <strong><a href="#">@FinviceConsulting</a></strong>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="text">
+                                                <p>Stay updated with the latest market trends and financial tips.</p>
+                                            </div>
+                                            <div class="info-box">
+                                                <i class="fa fa-twitter"></i>
+                                                <strong><a href="#">@FinviceConsulting</a></strong>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end upper-footer -->
+                <div class="copyright-info">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col col-xs-6">
+                                <div class="copyright-area">
+                                    <p id="copyright"></p>
+                                </div>
+                            </div>
+                            <div class="col col-xs-6">
+                                <div class="footer-social">
+                                    <span>Connect with us: </span>
+                                    <ul class="social-links">
+                                        <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-rss-square"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <!-- end site-footer -->
+    </div>
+    <!-- end of page-wrapper -->
+    <script>
+        function formatTimeAgo(publishDate) {
+            const now = new Date();
+            const published = new Date(publishDate);
+            const secondsAgo = Math.floor((now - published) / 1000);
+
+            let interval = Math.floor(secondsAgo / 31536000);
+            if (interval >= 1) return interval + " Year" + (interval > 1 ? "s" : "") + " ago";
+            interval = Math.floor(secondsAgo / 2592000);
+            if (interval >= 1) return interval + " Month" + (interval > 1 ? "s" : "") + " ago";
+            interval = Math.floor(secondsAgo / 86400);
+            if (interval >= 1) return interval + " Day" + (interval > 1 ? "s" : "") + " ago";
+            interval = Math.floor(secondsAgo / 3600);
+            if (interval >= 1) return interval + " Hour" + (interval > 1 ? "s" : "") + " ago";
+            interval = Math.floor(secondsAgo / 60);
+            if (interval >= 1) return interval + " Minute" + (interval > 1 ? "s" : "") + " ago";
+            return "Just now";
+        }
+
+        async function displayBlogs() {
+            try {
+                const response = await fetch('/blogs'); // Correct API endpoint for fetching all blogs
+                const blogs = await response.json();
+                const newsGrids = document.querySelector('.news-grids');
+                newsGrids.innerHTML = ''; // Clear existing content
+
+                blogs.forEach(blog => {
+                    const dateAgo = formatTimeAgo(blog.publishDate);
+                    const blogElement = `
+                        <div class="col col-md-4 col-xs-6">
+                            <div class="grid">
+                                <div class="entry-media">
+                                    <img src="${blog.image}" alt="">
+                                </div>
+                                <div class="entry-body">
+                                    <div class="entry-header">
+                                        <span class="date">${dateAgo}</span>
+                                        <h3><a href="#">${blog.title}</a></h3>
+                                    </div>
+                                    <div class="entry-details">
+                                        <p>${blog.content.substring(0, 145)}...</p>
+                                    </div>
+                                    <div class="entry-meta">
+                                        <a href="blog-details.html?blogId=${blog._id}" class="read-more">Read More</a>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`;
+                    newsGrids.innerHTML += blogElement;
+                });
+            } catch (error) {
+                console.error('Error fetching blogs:', error);
+            }
+        }
+
+        async function fetchAndDisplayClientLogos() {
+            try {
+                const response = await fetch('/api/logos'); // Correct API endpoint for fetching client logos
+                const data = await response.json();
+                const container = document.querySelector('.partners-slider'); // Select the partners-slider container
+                container.innerHTML = ''; // Clear existing logos
+
+                // Check if data is an array
+                if (Array.isArray(data) && data.length > 0) {
+                    data.forEach(logo => {
+                        const logoDiv = document.createElement('div');
+                        logoDiv.className = 'slide'; // Same class for Slick slider
+
+                        const img = document.createElement('img');
+                        img.src = logo.image; // Use image path from the response
+                        img.alt = 'Client Logo';
+                        img.style.width = '100px'; // Adjust size as needed
+                        img.style.height = 'auto'; // Maintain aspect ratio
+
+                        logoDiv.appendChild(img);
+                        container.appendChild(logoDiv);
+                    });
+
+                    // Re-initialize the Slick slider after the DOM update
+                    if ($('.customer-logos').hasClass('slick-initialized')) {
+                        $('.customer-logos').slick('unslick'); // Remove previous slick instance if any
+                    }
+
+                    $('.customer-logos').slick({
+                        slidesToShow: 6,
+                        slidesToScroll: 1,
+                        autoplay: true,
+                        autoplaySpeed: 1500,
+                        arrows: false,
+                        dots: false,
+                        pauseOnHover: false,
+                        responsive: [{
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 4
+                            }
+                        }, {
+                            breakpoint: 520,
+                            settings: {
+                                slidesToShow: 3
+                            }
+                        }]
+                    });
+                } else {
+                    console.warn('No logos available or data is not an array.');
+                    container.innerHTML = '<p>No logos available.</p>';
+                }
+            } catch (error) {
+                console.error('Error fetching client logos:', error);
+                alert('Failed to load client logos. Please try again later.');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            displayBlogs();
+            fetchAndDisplayClientLogos();
+        });
+
+    </script>
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script>
+        function initMap() {
+            var nairobi = { lat: -1.286389, lng: 36.817223 }; // Nairobi's coordinates
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: nairobi
+            });
+            var marker = new google.maps.Marker({
+                position: nairobi,
+                map: map
+            });
+        }
+        google.maps.event.addDomListener(window, 'load', initMap);
+    </script>
+
+
+    <!-- All JavaScript files
+    ================================================== -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins for this template -->
+    <script src="assets/js/jquery-plugin-collection.js"></script>
+
+    <!-- Google map api -->
+    <script src="https://maps.googleapis.com/maps/api/js?key"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const form = this;
+            const formData = new URLSearchParams(new FormData(form)).toString(); // Convert FormData to URL-encoded string
+
+            fetch('/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded', // Set the content type
+                },
+                body: formData,
+            })
+                .then(response => {
+                    if (response.ok) {
+                        document.getElementById('success').style.display = 'block';
+                        document.getElementById('error').style.display = 'none';
+                    } else {
+                        document.getElementById('error').style.display = 'block';
+                        document.getElementById('success').style.display = 'none';
+                    }
+                })
+                .catch(() => {
+                    document.getElementById('error').style.display = 'block';
+                    document.getElementById('success').style.display = 'none';
+                });
+        });
+
+    </script>
+
+    <!-- Custom script for this template -->
+    <script>
+        // Get the current year
+        const currentYear = new Date().getFullYear();
+        // Set the text of the copyright paragraph
+        document.getElementById("copyright").innerHTML = `${currentYear} &copy; Finvice Consulting. All Rights Reserved.`;
+    </script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

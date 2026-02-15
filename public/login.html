@@ -1,0 +1,172 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!-- Font Awesome -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+	<!-- MDB -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.min.css" rel="stylesheet" />
+	<style>
+		.gradient-custom-3 {
+			/* fallback for old browsers */
+			background: #84fab0;
+
+			/* Chrome 10-25, Safari 5.1-6 */
+			background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
+
+			/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5))
+		}
+
+		.gradient-custom-4 {
+			/* fallback for old browsers */
+			background: #84fab0;
+
+			/* Chrome 10-25, Safari 5.1-6 */
+			background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
+
+			/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
+		}
+		
+	</style>
+	<!-- Add this to your HTML file -->
+<style>
+	.toast {
+		position: fixed;
+		top: 20px; /* Distance from the top */
+		right: 20px; /* Distance from the right */
+		padding: 15px;
+		border-radius: 5px;
+		z-index: 1000; /* Ensure it appears above other content */
+		transition: opacity 0.5s ease;
+		opacity: 0.9;
+		display: none; /* Initially hidden */
+	}
+
+	.success-toast {
+		background-color: #4CAF50; /* Green background for success */
+		color: white;
+	}
+
+	.error-toast {
+		background-color: #f44336; /* Red background for errors */
+		color: white;
+	}
+</style>
+</head>
+
+<body>
+	<section class="vh-100" style="background-color: #9A616D;">
+		<div class="container py-5 h-100">
+			<div class="row d-flex justify-content-center align-items-center h-100">
+				<div class="col col-xl-10">
+					<div class="card" style="border-radius: 1rem;">
+						<div class="row g-0">
+							<div class="col-md-6 col-lg-5 d-none d-md-block">
+								<img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp"
+									alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+							</div>
+							<div class="col-md-6 col-lg-7 d-flex align-items-center">
+								<div class="card-body p-4 p-lg-5 text-black">
+
+									<form id="loginForm" method="post" action="/login">
+										<div class="d-flex align-items-center mb-3 pb-1">
+											<i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+											<span class="h1 fw-bold mb-0">Finvise</span>
+										</div>
+
+										<h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your
+											account</h5>
+
+										<div data-mdb-input-init class="form-outline mb-4">
+											<input type="email" id="email" class="form-control form-control-lg"
+												required />
+											<label class="form-label" for="email">Email address</label>
+										</div>
+
+										<div data-mdb-input-init class="form-outline mb-4">
+											<input type="password" id="password" class="form-control form-control-lg"
+												required />
+											<label class="form-label" for="password">Password</label>
+										</div>
+
+										<div class="pt-1 mb-4">
+											<button id="loginButton" class="btn btn-dark btn-lg btn-block"
+												type="submit">Login</button>
+										</div>
+
+										<a class="small text-muted" href="#!">Forgot password?</a>
+										<p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a
+												href="register.html" style="color: #393f81;">Register here</a></p>
+
+										<!-- Success message display -->
+										<div id="message" style="color: green; display: none;"></div>
+									</form>
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+<script>
+	document.getElementById('loginForm').addEventListener('submit', async function (event) {
+		event.preventDefault();
+
+		const email = document.getElementById('email').value;
+		const password = document.getElementById('password').value;
+
+		try {
+			const response = await fetch('/login', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ email, password })
+			});
+
+			const result = await response.json();
+
+			if (response.ok) {
+				// Display success message
+				showToast(result.message, 'success-toast'); // Pass the class for success
+				setTimeout(() => {
+					window.location.href = '/blogs'; // Redirect after showing the message
+				}, 2000); // Redirect after 2 seconds
+			} else {
+				// Display error message
+				showToast(result.message, 'error-toast'); // Pass the class for error
+			}
+		} catch (error) {
+			console.error('Error:', error);
+			showToast('An unexpected error occurred.', 'error-toast'); // Display error message
+		}
+	});
+
+	// Function to show a toast message
+	function showToast(message, type) {
+		const toastDiv = document.createElement('div');
+		toastDiv.className = `toast ${type}`; // Combine classes for styling
+		toastDiv.textContent = message;
+		document.body.appendChild(toastDiv);
+		toastDiv.style.display = 'block'; // Show the toast
+
+		// Remove the toast after a short period
+		setTimeout(() => {
+			toastDiv.remove();
+		}, 2000); // Adjust duration as needed
+	}
+</script>
+	<!-- MDB -->
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.umd.min.js"></script>
+</body>
+
+</html>
