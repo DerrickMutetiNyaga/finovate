@@ -2457,7 +2457,7 @@ img {
 }
 
 .site-header .navigation {
-  background-color: #012f5c;
+  background-color: #c2dcff;
   margin-bottom: 0;
   border: 0;
   -webkit-border-radius: 0;
@@ -2465,6 +2465,36 @@ img {
   -o-border-radius: 0;
   -ms-border-radius: 0;
   border-radius: 0;
+}
+
+/* Desktop navbar - white for homepage (header-style-4), dark blue for other pages */
+@media screen and (min-width: 992px) {
+  /* Homepage - keep white text */
+  .header-style-4 .navigation #navbar > ul > li > a {
+    color: #fff !important;
+  }
+  
+  /* All other pages - dark blue text */
+  .header-style-1 #navbar > ul > li > a,
+  .header-style-2 #navbar > ul > li > a,
+  .header-style-3 #navbar > ul > li > a,
+  .header-style-5 #navbar > ul > li > a,
+  .header-style-6 #navbar > ul > li > a {
+    color: #1F3A5F !important;
+  }
+}
+
+/* Mobile menu - navy blue for better readability */
+@media (max-width: 991px) {
+  .site-header .navigation #navbar > ul > li > a,
+  .header-style-1 #navbar > ul > li > a,
+  .header-style-2 #navbar > ul > li > a,
+  .header-style-3 #navbar > ul > li > a,
+  .header-style-4 #navbar > ul > li > a,
+  .header-style-5 #navbar > ul > li > a,
+  .header-style-6 #navbar > ul > li > a {
+    color: #1F3A5F !important;
+  }
 }
 
 .site-header .navigation > .container {
@@ -2488,6 +2518,50 @@ img {
 .site-header #navbar > ul li a:focus {
   text-decoration: none;
   color: #fdd415;
+}
+
+/* Desktop hover states - yellow for homepage, darker for other pages */
+@media screen and (min-width: 992px) {
+  /* Homepage - yellow hover */
+  .header-style-4 #navbar > ul li a:hover,
+  .header-style-4 #navbar > ul li a:focus {
+    color: #fdd415 !important;
+  }
+  /* Other pages - darker hover */
+  .header-style-1 #navbar > ul li a:hover,
+  .header-style-1 #navbar > ul li a:focus,
+  .header-style-2 #navbar > ul li a:hover,
+  .header-style-2 #navbar > ul li a:focus,
+  .header-style-3 #navbar > ul li a:hover,
+  .header-style-3 #navbar > ul li a:focus,
+  .header-style-5 #navbar > ul li a:hover,
+  .header-style-5 #navbar > ul li a:focus,
+  .header-style-6 #navbar > ul li a:hover,
+  .header-style-6 #navbar > ul li a:focus {
+    color: #1F3A5F !important;
+    opacity: 0.8;
+  }
+}
+
+/* Mobile menu hover states - keep navy blue for better readability */
+@media (max-width: 991px) {
+  .site-header #navbar > ul li a:hover,
+  .site-header #navbar > ul li a:focus,
+  .header-style-1 #navbar > ul li a:hover,
+  .header-style-1 #navbar > ul li a:focus,
+  .header-style-2 #navbar > ul li a:hover,
+  .header-style-2 #navbar > ul li a:focus,
+  .header-style-3 #navbar > ul li a:hover,
+  .header-style-3 #navbar > ul li a:focus,
+  .header-style-4 #navbar > ul li a:hover,
+  .header-style-4 #navbar > ul li a:focus,
+  .header-style-5 #navbar > ul li a:hover,
+  .header-style-5 #navbar > ul li a:focus,
+  .header-style-6 #navbar > ul li a:hover,
+  .header-style-6 #navbar > ul li a:focus {
+    color: #1F3A5F !important;
+    opacity: 0.8;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -2565,6 +2639,7 @@ img {
     display: block;
     font-size: 14px;
     font-size: 0.93333rem;
+    color: #1F3A5F !important;
   }
   .site-header #navbar > ul > li .sub-menu li {
     border-bottom: 1px solid #e6e6e6;
@@ -2574,9 +2649,11 @@ img {
   }
   .site-header #navbar > ul > li > .sub-menu a {
     padding: 8px 15px 8px 45px;
+    color: #1F3A5F !important;
   }
   .site-header #navbar > ul > li > .sub-menu .sub-menu a {
     padding: 8px 15px 8px 65px;
+    color: #1F3A5F !important;
   }
   .site-header #navbar > ul .menu-item-has-children > a {
     position: relative;
@@ -2759,7 +2836,7 @@ img {
     overflow: auto;
   }
   .site-header #navbar .close-navbar {
-    background-color: #012f5c;
+    background-color: #8bb5ff;
     width: 35px;
     height: 35px;
     color: #fff;
@@ -2780,6 +2857,7 @@ img {
   }
   .site-header #navbar > ul > li > a {
     padding: 10px 15px 10px 35px;
+    color: #1F3A5F !important;
   }
   .site-header .slideInn {
     right: 0 !important;
@@ -2792,6 +2870,19 @@ img {
   }
   .site-header #navbar .navbar-nav {
     margin: 0;
+  }
+}
+
+/* Logo sizing */
+.site-header .navbar-header .navbar-brand img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .site-header .navbar-header .navbar-brand img {
+    height: 36px;
   }
 }
 
@@ -2910,8 +3001,19 @@ img {
     font-size: 15px;
     font-size: 1rem;
     font-weight: 500;
-    color: #fff;
     padding: 30px 12px;
+  }
+  /* Homepage - white text */
+  .header-style-4 #navbar > ul > li > a {
+    color: #fff;
+  }
+  /* Other pages - dark blue text */
+  .header-style-1 #navbar > ul > li > a,
+  .header-style-2 #navbar > ul > li > a,
+  .header-style-3 #navbar > ul > li > a,
+  .header-style-5 #navbar > ul > li > a,
+  .header-style-6 #navbar > ul > li > a {
+    color: #1F3A5F;
   }
   .header-style-1 #navbar, .header-style-2 #navbar, .header-style-3 #navbar, .header-style-4 #navbar, .header-style-5 #navbar, .header-style-6 #navbar {
     margin-right: 115px;
@@ -3023,6 +3125,17 @@ img {
 @media (max-width: 767px) {
   .header-style-2 .site-logo, .header-style-3 .site-logo, .header-style-4 .site-logo, .header-style-5 .site-logo, .header-style-6 .site-logo {
     text-align: center;
+  }
+  .site-logo img {
+    max-width: 120px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-logo img {
+    max-width: 100px;
+    height: auto;
   }
 }
 
@@ -3955,6 +4068,19 @@ img {
 
 .site-footer .widget .footer-logo {
   margin-bottom: 15px;
+}
+
+/* Footer logo image sizing */
+.site-footer .widget .footer-logo img {
+  max-height: 48px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .site-footer .widget .footer-logo img {
+    max-height: 40px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
